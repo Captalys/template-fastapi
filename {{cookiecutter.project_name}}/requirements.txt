@@ -1,0 +1,4 @@
+# Redirects all pip install to our mirror
+--index-url https://jenkins:AP5XNMjF5R4cmRjxLixfLM8xfDJ@captalys.jfrog.io/artifactory/api/pypi/pypi/simple
+
+-e .

@@ -1,0 +1,5 @@
+{
+  "project_name": null,
+  "api_port": 5000,
+  "structure": ["API + POSTGRES"]
+}

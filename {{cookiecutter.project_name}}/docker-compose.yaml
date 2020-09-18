@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  api:
+    container_name: {{cookiecutter.project_name}}-api
+    build:
+      dockerfile: Dockerfile-dev
+      context: .
+    environment:
+      - DD_SERVICE={{cookiecutter.project_name}}
+      - DD_TRACE_ASGI_ANALYTICS_ENABLED=true
+      - DATABASE_URL=postgresql://test:test@db:5432/scorpion
+    volumes:
+      - .:/app/
+    ports:
+      - "{{cookiecutter.api_port}}:{{cookiecutter.api_port}}"
+{%- if cookiecutter.structure == "API + POSTGRES" -%}
+  {% filter escape %}
+    depends_on:
+      - db
+    links:
+      - db
+  {% endfilter %}
+  db:
+    container_name: {{cookiecutter.project_name}}-db
+    build:
+      context: .
+      dockerfile: scripts/Dockerfile-psql
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: scorpion
+{% endif %}

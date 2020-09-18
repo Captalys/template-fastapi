@@ -1,0 +1,21 @@
+FROM python:3.6-stretch
+
+# Para que os logs apareçam no datadog
+ENV PYTHONUNBUFFERED=TRUE
+
+RUN mkdir /app/
+WORKDIR /app/
+
+COPY . .
+
+
+RUN \
+    apt-get update && \
+    apt-get install -y libpq-dev gcc postgresql-client && \
+    python -m pip install --upgrade pip && \
+    pip install -r requirements-dev.txt
+
+
+EXPOSE {{cookiecutter.api_port}}
+
+ENTRYPOINT ["/bin/bash", "entrypoint-dev.sh"]
