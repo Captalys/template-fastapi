@@ -19,7 +19,7 @@ $ cookiecutter <url do repositório>/template-fastapi
 # Clonando e executando localmente
 $ git clone <url do repositório>/template-fastapi
 
-cookiecutter template-api-robo
+cookiecutter template-fastapi
 
 ```
 
