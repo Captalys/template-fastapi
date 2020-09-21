@@ -10,7 +10,7 @@ from src.resources.credentials import router as credentials_router
 patch_all()
 
 
-app = FastAPI(title="{{cookiecutter.project_name}}", redoc_url=None)
+app = FastAPI(title="{{cookiecutter.project_name}}", redoc_url=None, openapi_url='/swagger.json')
 app.add_middleware(TraceMiddleware)
 
 

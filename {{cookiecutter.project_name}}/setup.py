@@ -1,8 +1,6 @@
 from setuptools import setup, find_packages
 
 setup(name='{{cookiecutter.project_name}}',
-      # version_format="{tag}.dev{commitcount}",
-      # setup_requires=["setuptools-git-version"],
       description="Serviço de captura de dados de Adquirentes",
       author="Captalys Tech",
       author_email="desenvolvimento@captalys.com.br",
