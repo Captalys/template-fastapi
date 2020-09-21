@@ -9,7 +9,7 @@ services:
     environment:
       - DD_SERVICE={{cookiecutter.project_name}}
       - DD_TRACE_ASGI_ANALYTICS_ENABLED=true
-      - DATABASE_URL=postgresql://test:test@db:5432/scorpion
+      - DATABASE_URL=postgresql://test:test@db:5432/{{cookiecutter.db_name}}
     volumes:
       - .:/app/
     ports:
@@ -31,5 +31,5 @@ services:
     environment:
       POSTGRES_USER: test
       POSTGRES_PASSWORD: test
-      POSTGRES_DB: scorpion
+      POSTGRES_DB: {{cookiecutter.db_name}}
 {% endif %}

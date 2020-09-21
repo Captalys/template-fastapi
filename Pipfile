@@ -4,6 +4,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+coverage = "*"
+pytest = "*"
+requests = "*"
 
 [packages]
 fastapi = "*"
@@ -11,11 +14,6 @@ sqlalchemy = "*"
 uvicorn = "*"
 ddtrace = "*"
 psycopg2 = "*"
-pytest = "*"
-coverage = "*"
-aiohttp = "*"
-python-dateutil = "*"
-
 
 [requires]
 python_version = "3.7"

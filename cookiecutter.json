@@ -1,5 +1,6 @@
 {
   "project_name": null,
   "api_port": 5000,
+  "db_name": "{{ cookiecutter.project_name }}",
   "structure": ["API + POSTGRES"]
 }

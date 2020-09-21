@@ -3,9 +3,9 @@ from ddtrace.contrib.asgi import TraceMiddleware
 
 from fastapi import FastAPI
 
-from src.resources.healthcheck import router as hc_router
-from src.resources.crawler import router as crawler_router
-from src.resources.credentials import router as credentials_router
+from src.routes.healthcheck import router as hc_router
+from src.routes.example import router as ex_router
+
 
 patch_all()
 
@@ -14,6 +14,5 @@ app = FastAPI(title="{{cookiecutter.project_name}}", redoc_url=None, openapi_url
 app.add_middleware(TraceMiddleware)
 
 
-app.include_router(crawler_router)
-app.include_router(credentials_router)
-app.include_router(hc_router)
+app.include_router(ex_router, prefix="api/")
+app.include_router(hc_router, prefix="api/")
