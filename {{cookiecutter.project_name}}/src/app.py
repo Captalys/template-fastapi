@@ -14,5 +14,5 @@ app = FastAPI(title="{{cookiecutter.project_name}}", redoc_url=None, openapi_url
 app.add_middleware(TraceMiddleware)
 
 
-app.include_router(ex_router, prefix="api/")
-app.include_router(hc_router, prefix="api/")
+app.include_router(ex_router, prefix="/api")
+app.include_router(hc_router, prefix="/api")
