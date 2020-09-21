@@ -9,7 +9,14 @@ How Captalys is working in Python FastAPI to build Services APIs to its internal
 3. Tests, we would think about what need to be tested.
 4. Program towards interfaces instead of concrete implementations
 
-#### Structure
+### Configuration
+
+
+You need to provide an environment variable called `DATABASE_URL` in
+order to the project work properly.
+
+
+### Structure
 
 Tree structure that will be created:
 
