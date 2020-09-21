@@ -14,10 +14,10 @@ Após a instalação ser concluída, pode-se utilizar o template de duas formas:
 ```shell script
 
 # Diretamente do git
-$ cookiecutter <url do repositório>/template-api-robo
+$ cookiecutter <url do repositório>/template-fastapi
 
 # Clonando e executando localmente
-$ git clone <url do repositório>/template-api-robo
+$ git clone <url do repositório>/template-fastapi
 
 cookiecutter template-api-robo
 

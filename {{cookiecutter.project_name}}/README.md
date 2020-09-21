@@ -1,11 +1,24 @@
-### Introdução 
+# fastapi example 
 
-Este repositório contém a implementação do robô **{{cookiecutter.project_name}}** para extração de fluxo. 
+How Captalys is working in Python FastAPI to build Services APIs to its internal processes.
+
+## General guidelines
+
+1. RESTful APIs, follows some guidelines provided by [WhiteHouse/api-standards](https://github.com/WhiteHouse/api-standards)
+2. Documentation and consistency of APIs are very important to us
+3. Tests, we would think about what need to be tested.
+4. Program towards interfaces instead of concrete implementations
+
+### Configuration
 
 
-#### Estrutura
+You need to provide an environment variable called `DATABASE_URL` in
+order to the project work properly.
 
-Abaixo a arvore de diretórios e arquivos contidos:
+
+### Structure
+
+Tree structure that will be created:
 
 ```shell script
 .
@@ -37,16 +50,3 @@ Abaixo a arvore de diretórios e arquivos contidos:
 └── tests/
 
 ```
-
-#### Configuração
-
-Para que o robô funcione corretamente, são necessárias as seguintes configurações:
-
- - Adicionar as urls que serão consumidas no dicionário contido em `./src/utils/urls.URL_MAPPING`
- - Implementar os métodos `get_flow` e `login` da classe `Crawler` em `./src/core/crawler.py`
-
-As variáveis de ambiente que o robô espera encontrar para funcionar corretamente são:
-
- - DATABASE_URL: Connection string para o banco de dados do `scorpion` no formato `postgresql://<user>:<pass>@<servidor>:<porta>/<dbname>`
-
- 
