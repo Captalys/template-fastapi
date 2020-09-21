@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='{{cookiecutter.project_name}}',
-      description="Serviço de captura de dados de Adquirentes",
+      description="Build your brand new service!",
       author="Captalys Tech",
       author_email="desenvolvimento@captalys.com.br",
       license="BSD",
