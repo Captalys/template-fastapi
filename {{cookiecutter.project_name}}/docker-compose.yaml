@@ -23,9 +23,7 @@ services:
   {% endfilter %}
   db:
     container_name: {{cookiecutter.project_name}}-db
-    build:
-      context: .
-      dockerfile: scripts/Dockerfile-psql
+    image: postgres:10.13-alpine
     ports:
       - "5432:5432"
     environment:
